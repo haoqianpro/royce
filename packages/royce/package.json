@@ -1,0 +1,40 @@
+{
+  "name": "royce",
+  "version": "1.0.0",
+  "description": "A Component Library for Vue 3",
+  "keywords": [
+    "royce",
+    "component library",
+    "ui framework",
+    "ui",
+    "vue"
+  ],
+  "homepage": "https://vangleer.github.io/vangle/",
+  "bugs": {
+    "url": "https://github.com/vangleer/vangle/issues"
+  },
+  "license": "MIT",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "unpkg": "dist/index.umd.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./*": "./*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vangleer/vangle.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "style": "dist/style.css",
+  "scripts": {},
+  "author": "rry",
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  }
+}

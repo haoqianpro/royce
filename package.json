@@ -1,0 +1,23 @@
+{
+  "name": "royce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "play": "pnpm --filter ./play dev",
+    "docs": "pnpm --filter ./packages/docs docs:dev",
+    "build": "node ./scripts/build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@royce/components": "workspace:*",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "sass": "^1.56.1",
+    "unplugin-vue-define-options": "^0.12.7",
+    "vite": "^3.2.3",
+    "vitepress": "1.0.0-alpha.28",
+    "vue": "^3.2.41"
+  }
+}

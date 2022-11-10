@@ -1,0 +1,47 @@
+@import 'var.scss';
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --bg-color: var(--color-white);
+  //ding
+  --padding-base: 4px;
+  --padding-small: 12px;
+  --padding-middle: 16px;
+  --padding-large: 24px;
+  --line-height-small: 18px;
+  --line-height-middle: 20px;
+  --line-height-large: 22;
+  //der
+  --border-color: #ebedf0;
+  --border-width: 1px;
+  --border: var(--border-width) solid var(--border-color);
+  --radius-small: 2px;
+  --radius-middle: 4px;
+  --radius-large: 8px;
+  --radius-round: 20px;
+  --radius-max: 999px;
+
+  --active-opacity: 0.6;
+  --disabled-opacity: 0.5;
+
+  // Font
+  @each $key, $value in $fontSizes {
+    --font-size-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $fontColors {
+    --text-color-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $disabledColors {
+    --disabled-#{$key}-color: #{$value};
+  }
+
+  @each $key, $value in $iconSizes {
+    --icon-size-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $colors {
+    --color-#{$key}: #{$value};
+  }
+}

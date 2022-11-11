@@ -1,5 +1,6 @@
+const sidebar = require('./sidebar.js');
 export const config = {
-  title: 'Vangle',
+  title: 'Royce',
   description: 'a Vue 3 based component library for designers and developers',
   themeConfig: {
     logo: '/images/vite.svg',
@@ -12,24 +13,19 @@ export const config = {
       indexName: 'index_name',
     },
     nav: [
-      { text: '指南', link: '/guide/design' },
+      { text: '指南', link: '/guide/install' },
       { text: '组件', link: '/component/button' },
     ],
-    socialLinks: [{ icon: 'github', link: 'https://github.com/vangleer' }],
-    sidebar: {
-      '/guide/': [],
-      '/component/': [
-        {
-          text: 'Basic',
-          items: [
-            {
-              text: 'Button',
-              link: '/component/button',
-            },
-          ],
-        },
-      ],
+    markdown: {
+      anchor: { permalink: false },
+      toc: { includeLevel: [1, 2] },
+      config: md => {
+        const { demoBlockPlugin } = require('vitepress-theme-demoblock');
+        md.use(demoBlockPlugin);
+      },
     },
+    socialLinks: [{ icon: 'github', link: 'https://github.com/vangleer' }],
+    sidebar,
   },
 };
 

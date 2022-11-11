@@ -1,5 +1,5 @@
 {
-  "name": "royce",
+  "name": "alcohol-filled-chocolate",
   "version": "1.0.0",
   "description": "A Component Library for Vue 3",
   "keywords": [
@@ -9,9 +9,9 @@
     "ui",
     "vue"
   ],
-  "homepage": "https://vangleer.github.io/vangle/",
+  "homepage": "https://github.com/haoqianpro/royce/",
   "bugs": {
-    "url": "https://github.com/vangleer/vangle/issues"
+    "url": "https://github.com/haoqianpro/royce/issues"
   },
   "license": "MIT",
   "main": "dist/index.umd.js",
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vangleer/vangle.git"
+    "url": "https://github.com/haoqianpro/royce.git"
   },
   "publishConfig": {
     "access": "public"

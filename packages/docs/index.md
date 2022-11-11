@@ -2,13 +2,13 @@
 layout: home
 
 hero:
-  name: Vangle
+  name: Royce
   text:
   tagline: 基于 Vue 3，面向设计师和开发者的组件库
   actions:
     - theme: brand
-      text: Why Vangle
-      link: /articles/组件库环境搭建
+      text: 指南
+      link: /guide/install
     - theme: alt
       text: 快速开始
       link: /component/button

@@ -18,6 +18,7 @@ Royce Vue3 组件库
 
   - 可以仿照 tag 组件 创建目录编写代码，并在 components/index.js 中导出组件
   - 在 play 中测试组件不需打包，可直接在 play/src/App.vue 中导入组件并测试
+  - 打包 在 royce/index.js 中把自己的组件导出,添加到 components 数组中
   - 在 docs 中编写文档展示组件效果需要打包；在 docs/.vitepress/sidebar.js 中的 getComponentSidebar 新建项目;在 docs/component 下新建 md 文档，在其中使用组件不需导入
 
 - 脚本命令

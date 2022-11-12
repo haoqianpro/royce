@@ -1,15 +1,13 @@
 <script setup>
-import { RyButton } from '@royce/components';
-const handleClick = () => {
-  console.log('click');
-};
+import { RyTag } from '@royce/components';
 </script>
 
 <template>
-  <ry-button @click="handleClick">hello</ry-button>
-  <ry-button @click="handleClick" type="primary">hello</ry-button>
-  <ry-button @click="handleClick" native-type="submit">hello</ry-button>
-  <ry-button @click="handleClick" disabled>hello</ry-button>
+  <ry-tag>tag</ry-tag>
+  <ry-tag type="success">tag</ry-tag>
+  <ry-tag type="info">tag</ry-tag>
+  <ry-tag type="warning">tag</ry-tag>
+  <ry-tag type="danger">tag</ry-tag>
 </template>
 
 <style scoped></style>

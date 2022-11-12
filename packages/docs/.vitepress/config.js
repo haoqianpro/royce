@@ -14,7 +14,7 @@ export const config = {
     },
     nav: [
       { text: '指南', link: '/guide/install' },
-      { text: '组件', link: '/component/button' },
+      { text: '组件', link: '/component/tag' },
     ],
     markdown: {
       anchor: { permalink: false },

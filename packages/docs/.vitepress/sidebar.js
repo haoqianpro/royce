@@ -9,8 +9,8 @@ function getComponentSidebar() {
       text: '基础组件',
       items: [
         {
-          text: 'Button 按钮',
-          link: '/component/button',
+          text: 'Tag 标签',
+          link: '/component/tag',
         },
       ],
     },

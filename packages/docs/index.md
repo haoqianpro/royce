@@ -11,7 +11,7 @@ hero:
       link: /guide/install
     - theme: alt
       text: 快速开始
-      link: /component/button
+      link: /component/tag
 
 features:
   - icon: ⚡️

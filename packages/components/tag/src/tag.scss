@@ -1,0 +1,36 @@
+.ry-tag {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 24px;
+  padding: 0 9px;
+  border: 1px solid var(--color-primary-light-8);
+  border-radius: var(--radius-middle);
+  background-color: var(--color-primary-light-9);
+  color: var(--color-primary);
+  font-size: var(--font-size-small);
+  line-height: 22px;
+}
+
+.ry-tag--success {
+  background-color: var(--color-success-light-9);
+  border-color: var(--color-success-light-8);
+  color: var(--color-success);
+}
+
+.ry-tag--info {
+  background-color: var(--color-info-light-9);
+  border-color: var(--color-info-light-8);
+  color: var(--color-info);
+}
+
+.ry-tag--warning {
+  background-color: var(--color-warning-light-9);
+  border-color: var(--color-warning-light-8);
+  color: var(--color-warning);
+}
+
+.ry-tag--danger {
+  background-color: var(--color-danger-light-9);
+  border-color: var(--color-danger-light-8);
+  color: var(--color-danger);
+}

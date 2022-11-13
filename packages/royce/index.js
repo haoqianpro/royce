@@ -1,6 +1,8 @@
 export * from '../components';
 import { RyTag } from '@royce/components';
-const components = [RyTag];
+import { TButton } from '@royce/components';
+
+const components = [RyTag,TButton];
 
 const INSTALLED_KEY = Symbol('INSTALLED_KEY');
 export const install = app => {

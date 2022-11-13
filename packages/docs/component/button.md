@@ -1,16 +1,4 @@
-<script setup>
-import { RyTag } from '@royce/components';
-import { TButton } from  '@royce/components';
-</script>
-
-<template>
-  <ry-tag>tag</ry-tag>
-  <ry-tag type="success">tag</ry-tag>
-  <ry-tag type="info">tag</ry-tag>
-  <ry-tag type="warning">tag</ry-tag>
-  <ry-tag type="danger">tag</ry-tag>
- 
-  <H2 id="icon">button按钮</H2>
+<H2 id="icon">button按钮</H2>
   <P>常用的按钮操作</P>
   <h3>基础用法</h3>
   <p>基础的按钮用法</p>
@@ -35,7 +23,7 @@ import { TButton } from  '@royce/components';
     <p>按钮不可用状态</p>
     <div class="disabled">
       <t-button type="primary" disabled round>禁用按钮</t-button>
-      <div class="default">
+    <div class="default">
       <t-button type="default" disabled>默认按钮</t-button>
       <t-button type="primary" disabled>主要按钮</t-button>
       <t-button type="success" disabled>成功按钮</t-button>
@@ -59,6 +47,6 @@ import { TButton } from  '@royce/components';
       <t-button type="text" >文字按钮</t-button>
     </div>
   </div>
-</template>
 
-<style scoped></style>
+
+        

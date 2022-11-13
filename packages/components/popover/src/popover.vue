@@ -8,7 +8,7 @@
   </div> -->
   <div class="latte-popover">
     <!-- 添加弹出框动画 -->
-    <transition>
+    <transition name="fade">
       <!-- 弹出框部分 -->
       <div
         ref="popper"

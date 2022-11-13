@@ -1,0 +1,47 @@
+.latte-popover {
+  position: relative;
+  margin-top: 100px;
+  // 弹出框
+  .popover {
+    position: absolute;
+    left: 50%;
+    background-color: #fff;
+    padding: 0 5px 5px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    z-index: 9999;
+    // 弹出框的小三角
+    .popover-arrow {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+    }
+    // 当弹出框位置为上方
+    .popover-arrow-top-start {      
+      border-top-color: #fff;
+      left: 50%;
+      bottom: -12px;
+      margin-left: -6px;
+    }
+    // 当弹出框位置为下方
+    .popover-arrow-bottom {
+      border-bottom-color: #fff;
+      left: 50%;
+      top: -12px;
+      margin-left: -6px;
+    }
+    //当弹出框位置为右方
+    .popover-arrow-right {
+      border-right-color: #fff;
+      top: 50%;
+      left: -12px;
+      margin-top: -6px;
+    }
+  }
+  .wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

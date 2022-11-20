@@ -27,12 +27,12 @@ importers:
 
   packages/docs:
     specifiers:
-      '@royce/components': workspace:^1.0.0
       alcohol-filled-chocolate: workspace:^1.0.0
     dependencies:
       alcohol-filled-chocolate: link:../royce
-    devDependencies:
-      '@royce/components': link:../components
+
+  packages/royce:
+    specifiers: {}
 
   play:
     specifiers:

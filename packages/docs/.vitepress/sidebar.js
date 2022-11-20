@@ -12,6 +12,10 @@ function getComponentSidebar() {
           text: 'Tag 标签',
           link: '/component/tag',
         },
+        {
+          text: 'Popover弹出框',
+          link: '/component/popover'
+        }
       ],
     },
   ];

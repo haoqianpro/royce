@@ -1,11 +1,4 @@
 <template>
-  <!-- <div class="latte-popover">
-    <div class="latte-popover-content" v-show="visible">
-      <div class="latte-popover-content-body">{{content}}</div>
-      <div class="triangle"></div>
-    </div>
-    <slot name="reference" class="slot"></slot>
-  </div> -->
   <div class="latte-popover">
     <!-- 添加弹出框动画 -->
     <transition name="fade">
@@ -56,7 +49,7 @@ export default defineComponent ({
     // 弹框显示位置属性
     placement: {
       type: String,
-      default: 'top-start'
+      default: 'top'
     }
   },
   data() {
@@ -69,26 +62,30 @@ export default defineComponent ({
       popTop: 0
     } 
   },
-  watch: {
-    visible(val) {
-      if (val) {
-        this.getClient()
-      }
-    }
-  },
-  mounted() {
+  // watch: {
+  //   visible(val) {
+  //     if (val) {
+  //       this.getClient()
+  //     }
+  //   }
+  // },
+  mounted() {    
     // 获取弹出框元素
     const popper = this.$refs.popper
+    // 给弹出框的width赋值
+    popper.style.width = this.width + 'px'
+    this.getClient()
     // 取到显示主体的元素
     const reference = this.$refs.wrapper.children[0]
     const arrow = document.createElement('div')
-    if (this.placement === 'top-start') {
-      arrow.className = 'popover-arrow popover-arrow-top-start'
-    } else if (this.placement === 'bottom') {
-      arrow.className = 'popover-arrow popover-arrow-bottom'
-    } else if (this.placement === 'right') {
-      arrow.className = 'popover-arrow popover-arrow-right'
-    }
+    arrow.className = `popover-arrow popover-arrow-${this.placement}`
+    // if (this.placement === 'top') {
+    //   arrow.className = 'popover-arrow popover-arrow-top'
+    // } else if (this.placement === 'bottom') {
+    //   arrow.className = 'popover-arrow popover-arrow-bottom'
+    // } else if (this.placement === 'right') {
+    //   arrow.className = 'popover-arrow popover-arrow-right'
+    // }
     popper.appendChild(arrow)
     // 主体内容添加点击事件
     if (this.trigger === 'click') {      
@@ -106,11 +103,6 @@ export default defineComponent ({
     // 弹出框显示
     showPopover() {
       this.visible = !this.visible
-      if (this.visible) {
-        // 获取弹框组件中的第一个元素即插槽并给他的宽度一个值
-        const popper = this.$refs.popper.children[0]
-        popper.style.width = this.width + 'px'
-      }
     },
     // 获取弹出框的定位属性
     getClient() {
@@ -123,19 +115,18 @@ export default defineComponent ({
       this.popMarginLeft = -(popWidth / 2)
       this.popTop = -popHeight
       // 当弹出框显示位置为上方时弹出框的属性
-      if (this.placement === 'top-start') {
-        popper.style.marginLeft = this.popMarginLeft + 'px'
-        popper.style.top = this.popTop - 20 + 'px'
+      if (this.placement === 'top') {
+        popper.style.transform = 'translateX(-50%)'
+        popper.style.top = this.popTop + 'px'
       }
       // 当弹出框显示位置为下方时弹出框的属性
       else if (this.placement === 'bottom') {
-        popper.style.marginLeft = this.popMarginLeft + 'px'
-        popper.style.bottom = this.popTop - 40 + 'px'
+        popper.style.transform = 'translateX(-50%)'
+        popper.style.top = -this.popTop  + 'px'
       }
       // 当弹出框显示位置为右方时弹出框的属性
       else if (this.placement === 'right') {
-        popper.style.marginLeft = -this.popMarginLeft - 60 + 'px'
-        popper.style.top = this.popTop / 2 + 'px'
+        popper.style.marginLeft = this.$refs.wrapper.children[0].offsetWidth + 'px'
       }
     }
   }

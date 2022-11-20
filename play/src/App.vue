@@ -1,9 +1,11 @@
 <script setup>
 import { RyTag } from '@royce/components';
 import { Popover } from '@royce/components'
+import { Drawer } from '@royce/components'
 import { ref } from 'vue';
 const content = ref('对话框')
 const title = ref('标题')
+const open = ref(false)
 </script>
 
 <template>
@@ -13,9 +15,9 @@ const title = ref('标题')
   <ry-tag type="warning">tag</ry-tag>
   <ry-tag type="danger">tag</ry-tag>
   <Popover
-      placement="bottom"
+      placement="top"
       trigger="click"
-      :width="300"
+      :width="500"
       :title="title"
       :content="content"
     >
@@ -23,6 +25,18 @@ const title = ref('标题')
         <button>点击</button>
       </template>
   </Popover>
+  <Drawer
+    :open="open"
+    placement="right"
+    @change:chanegOpen="val => open = val"
+  >
+    <h1>hello</h1>
+  </Drawer>
+  <button @click="this.open = !this.open" class="drawer">click to change drawer</button>
 </template>
 
-<style scoped></style>
+<style scoped>
+button.drawer {
+  margin-top: 100px;
+}
+</style>

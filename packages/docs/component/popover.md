@@ -1,0 +1,58 @@
+<h1>Popover气泡卡片</h1>
+<h2>基础用法</h2>
+<p>
+  <code>trrgger</code>
+  属性被用来决定popover的触发方式，支持的触发方式有： <code>hover</code>、<code>click</code>。
+</p>
+
+<h2>Popover属性</h2>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>属性名</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>可选值</th>
+        <th>默认值</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>trigger</td>
+        <td>触发方式</td>
+        <td>string</td>
+        <td>click/hover</td>
+        <td>click</td>
+      </tr>
+      <tr>
+        <td>title</td>
+        <td>标题</td>
+        <td>string</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>content</td>
+        <td>显示的内容，也可以通过写入默认 slot 修改显示内容</td>
+        <td>string</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>width</td>
+        <td>宽度</td>
+        <td>number</td>
+        <td>—</td>
+        <td>最小宽度150px</td>
+      </tr>
+      <tr>
+        <td>placement</td>
+        <td>出现位置</td>
+        <td>string</td>
+        <td>top-start/bottom/right</td>
+        <td>top-start</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

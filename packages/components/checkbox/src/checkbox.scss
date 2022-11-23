@@ -1,0 +1,30 @@
+.ry-checkbox {
+  display: inline-block;
+  height: 40px;
+  margin-right: 10px;
+  color: var(--text-color-primary);
+  cursor: pointer;
+}
+
+.is-disabled {
+  color: var(--disabled-text-color);
+  cursor: not-allowed;
+}
+
+.ry-checkbox__input {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.ry-checkbox__input input {
+  width: 15px;
+  height: 15px;
+}
+
+.ry-checkbox__label {
+  line-height: 40px;
+}
+
+.is-checked {
+  color: var(--color-primary-light-3);
+}

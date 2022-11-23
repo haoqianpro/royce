@@ -1,0 +1,27 @@
+.ry-input {
+  height: 40px;
+  padding: 0 var(--padding-small);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-small);
+}
+
+.ry-input__inner {
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+}
+
+.ry-input__focus {
+  border-color: var(--color-primary-light-5);
+}
+
+.ry-input__disabled .ry-input__inner {
+  cursor: not-allowed;
+  color: var(--disabled-text-color);
+}
+.ry-input__disabled {
+  border-color: var(--disabled-border-color);
+  background-color: var(--disabled-bg-color);
+}

@@ -1,0 +1,122 @@
+// 遮罩
+.drawer-mask {
+  z-index: 999;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 200ms, height 1ms;
+  // 遮罩中显示的内容（公共样式）
+  .drawer-content {
+    position: absolute;
+    
+    background-color: #fff;
+    transition: transform 300ms;
+
+    // 右上方关闭按钮
+    span {
+      box-sizing: border-box;
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid #000;
+      }
+    }
+  }
+  // 当遮罩为打开状态（公共样式）
+  &.open {
+    opacity: 1;
+    height: 100%;
+  }
+  // 当遮罩为关闭状态（公共样式）
+  &.close {
+    opacity: 0;
+    height: 0;
+    transition-delay: 300ms;
+  }
+  // 当弹出内容位置为下方
+  &.bottom {
+    .drawer-content {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: auto;
+      padding: 50px;
+    }
+    &.open {
+      .drawer-content {
+        transform: translateY(0);
+      }
+    }
+    &.close {
+      .drawer-content {
+        transform: translateY(100%);
+      }
+    }
+  }
+  // 当弹出内容位置为上方
+  &.top {
+    .drawer-content {
+      left: 0;
+      right: 0;
+      bottom: auto;
+      top: 0;
+      padding: 50px;
+    }
+    &.open {
+      .drawer-content {
+        transform: translateY(0);
+      }
+    }
+    &.close {
+      .drawer-content {
+        transform: translateY(-100%);
+      }
+    }
+  }
+  // 当弹出内容位置为左方
+  &.left {
+    .drawer-content {
+      left: 0;
+      right: auto;
+      bottom: 0;
+      top: 0;
+      padding: 50px;
+    }
+    &.open {
+      .drawer-content {
+        transform: translateX(0);
+      }
+    }
+    &.close {
+      .drawer-content {
+        transform: translateX(-100%);
+      }
+    }
+  }
+  // 当弹出内容位置为右方
+  &.right {
+    .drawer-content {
+      left: auto;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      padding: 50px;
+    }
+    &.open {
+      .drawer-content {
+        transform: translateX(0);
+      }
+    }
+    &.close {
+      .drawer-content {
+        transform: translateX(100%);
+      }
+    }
+  }
+}

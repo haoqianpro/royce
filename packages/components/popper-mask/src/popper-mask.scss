@@ -1,0 +1,22 @@
+.popper-mask {
+  z-index: 999;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 200ms, height 1ms;
+  // 当遮罩为打开状态（公共样式）
+  &.open {
+    opacity: 1;
+    height: 100%;
+  }
+  // 当遮罩为关闭状态（公共样式）
+  &.close {
+    opacity: 0;
+    height: 0;
+    transition-delay: 300ms;
+  }
+}

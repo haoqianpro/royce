@@ -13,8 +13,12 @@ function getComponentSidebar() {
           link: '/component/tag',
         },
         {
-          text: 'Popover弹出框',
+          text: 'Popover 弹出框',
           link: '/component/popover'
+        },
+        {
+          text: 'Drawer 抽屉',
+          link: '/component/drawer'
         }
       ],
     },

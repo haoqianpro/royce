@@ -1,20 +1,25 @@
 <template>
-  <div
-    class="drawer-mask"
-    :class="caleClass"
-    @click.self="closeMask"
+  <PopperMask
+    :caleClass="caleClass"
+    :open="open"
+    @click.self="closeMask(false)"
   >
-    <div class="drawer-content">
+    <div class="drawer-content" :class="caleClass">
+      <span @click="closeMask(false)">X</span>
       <slot></slot>
     </div>
-  </div>
+  </PopperMask>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
+import PopperMask from '../../popper-mask/src/popper-mask.vue'
 import './drawer.scss'
 export default defineComponent({
-  name: 'Drawer',  
+  name: 'Drawer',
+  components: {
+    PopperMask
+  },
   props: {
     // 绑定遮罩打开关闭参数
     open: {
@@ -29,36 +34,21 @@ export default defineComponent({
   },
   // 将值传给父元素的open
   emits: ['change:chanegOpen'],
-  data() {
-    return {
-      // 遮罩打开关闭
-      isOpen: this.open
-    }
-  },
-  watch: {
-    // 监听open，如果变化将值传给isOpen
-    open(val) {
-      this.isOpen = val
-    },
-    // 监听isOpen，如果变化将值通过$emit传给open
-    isOpen(val) {
-      this.$emit('change:chanegOpen', val)
-    }
-  },
+  data() {},
   computed: {
     // 遮罩及其子元素的css样式
     caleClass() {
       return [
-        {'open': this.isOpen},
-        {'close': !this.isOpen},
-        this.placement
+        this.placement,
+        {'open': this.open},
+        {'close': !this.open},        
       ]
     }
   },
   methods: {
     // 关闭遮罩
-    closeMask() {
-      this.isOpen = !this.isOpen
+    closeMask(val) {
+      this.$emit('change:changeOpen', val)
     }
   }
 })

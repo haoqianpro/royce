@@ -6,6 +6,7 @@ import { ref } from 'vue';
 const content = ref('对话框')
 const title = ref('标题')
 const open = ref(false)
+const hasMask = ref(true)
 </script>
 
 <template>
@@ -26,13 +27,14 @@ const open = ref(false)
       </template>
   </Popover>
   <Drawer
+    :hasMask="hasMask"
     :open="open"
     placement="right"
-    @change:chanegOpen="val => open = val"
+    @change:changeOpen="val => open = val"
   >
     <h1>hello</h1>
   </Drawer>
-  <button @click="this.open = !this.open" class="drawer">click to change drawer</button>
+  <button @click="this.open = true" class="drawer">click to change drawer</button>
 </template>
 
 <style scoped>
